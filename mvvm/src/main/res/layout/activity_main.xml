@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data >
+        <variable
+            name="viewModle"
+            type="com.hongqian.net.mvvm.LoginViewModule"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="账户:"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <EditText
+                android:text="@={viewModle.userName}"
+                android:layout_width="180dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="密码:"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <EditText
+                android:text="@={viewModle.pwd}"
+                android:layout_width="180dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:onClick="@{viewModle.login}"
+            android:text="登陆"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+        <Button
+            android:text="重置"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+</LinearLayout>
+</layout>
